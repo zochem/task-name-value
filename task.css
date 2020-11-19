@@ -1,0 +1,80 @@
+body{
+    padding: 20px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas: 
+    "form button"
+    "form div";
+    grid-template-columns: 400px 100px;
+    grid-template-rows: 40px 250px;
+    grid-gap: 20px;
+}
+
+input,label{
+    display: block;
+}
+
+input, #list, #table{
+    width: 360px;
+}
+
+#list{
+    border: solid 1px black;
+    height: 300px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+
+button{
+    margin-top: 10px;
+    font-size: small;
+}
+
+tr, td{
+    margin: 5px;
+}
+
+#error{
+    display: block;
+    margin: 2px 0 0 0;
+    color: red;
+    font-size: x-small; 
+}
+
+.modalShowXML{
+    display: none;
+    position: fixed; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    z-index: 1; 
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modalText{
+    background-color: #e6e6e6;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+}
+
+.closeModal{
+    color: #b6b5b5;
+    float: right; 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeModal:hover, 
+.closeModal:focus{
+    color: #2a2a2a;
+    text-decoration: none;
+    cursor: pointer;
+}

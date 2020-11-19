@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test task</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <h2>Test</h2>
+    <div class="wrapper">
+        <!-- End user input of Name/Value pair -->
+        <form id="ValueInput" name="test">
+            <label for="value">Name/Value Pair</label>
+            <input type="text" id="value" name="value" placeholder="Name=Value">
+            <span id="error"></span>
+        </form>
+        <!-- Submit Button for input below -->
+        <button form="ValueInput" type="submit" onsubmit="return false">Add</button>
+
+        <!-- Section for Name/Value Pairs list -->
+        <div>
+            Name/Value Pair list
+            <div id="list">
+                <table id='table'>
+                </table>
+            </div>
+        </div>
+
+        <!-- Buttons, that allow user to sort values by Name or Value, 
+            delete all records or show data in XML format-->
+        <div class="buttons">
+            <button type="button" id="sortByName" onclick="sortByName()">Sort by Name</button>
+            <button type="button" id="sortByValue" onclick="sortByValue()">Sort by Value</button>
+            <button type="button" id="Delete" onclick="_delete()">Delete</button>
+            <button type="button" id="ShowXML" onclick="showXML()">Show XML</button>
+        </div>
+    </div>
+
+        <!-- Modal window is used to show Name/Value pairs in XML format -->
+    <div class="modalShowXML" id="modalXML">
+        <div id='XML-content' class="modalText">
+            <span class="closeModal">&times;</span>
+            <p id="XML"></p>
+        </div>
+    </div>
+
+<script src="./task.js"></script> 
+</body>
+</html>
