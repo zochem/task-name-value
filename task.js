@@ -108,7 +108,6 @@ let sortByValue = () => {
 let _delete = () => {
     data = [];
     table.innerHTML = null;
-    document.getElementById('list').innerHTML = null; 
 }
 
 // Show inserted pairs in XML format via modal window
